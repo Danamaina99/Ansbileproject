@@ -1,0 +1,4 @@
+#Install a  role directly from Github using a specific branch and tag.
+- name: essentials
+  src: https://github.com/zaiste/ansible-essentials
+  version: origin/master
