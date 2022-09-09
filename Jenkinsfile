@@ -14,7 +14,7 @@ pipeline {
              
           }
         }
-         stage('Tools Init') {
+        /* stage('Tools Init') {
             steps {
                 script {
                     echo "PATH = ${PATH}"
@@ -41,6 +41,6 @@ pipeline {
                  
            sh "ansible-playbook main.yml -i inventories/dev/hosts -- user jenkins --key-file ~/.ssh/id_rsa"
 }
-}
+} **/
 }
 }
