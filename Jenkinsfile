@@ -16,8 +16,8 @@ pipeline {
              
             steps {
                 script {
-                    ansiColor("xterm") {
-                        ansible.galaxy()
+                  
+                         ansible.galaxy()
                         ansiblePlaybook(
              credentialsId: 'Ansible2', 
              disableHostKeyChecking: true, 
@@ -26,7 +26,6 @@ pipeline {
              playbook: 'apache.yml'
          )
 
-} 
 }
 }
 }
