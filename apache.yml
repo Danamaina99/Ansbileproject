@@ -16,12 +16,3 @@
      # copy:
        # src: index.html # We have define a html page 
       #  dest: /var/www/html/
-...
-# We will install nginx and run the service then we will replace our own html oage with default page.
-
-#dev.inv
-
-[localhost]
-172.31.6.168 ansible_user=ec2-user 
-
-# this is the inventory file for remote server where we want to install nginx.
