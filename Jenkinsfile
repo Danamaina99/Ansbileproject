@@ -16,7 +16,7 @@ pipeline {
              
             steps {
                  
-           ansiblePlaybook credentialsId: 'Ansible2', disableHostKeyChecking: true, installation: 'ansible2', inventory: 'inventory.ini', playbook: 'apache.yml'
+           ansiblePlaybook credentialsId: 'Ansible2', disableHostKeyChecking: true, installation: 'ansible2', inventory: 'Ansibleproject/inventory.ini', playbook: 'Ansibleproject/apache.yml'
 } 
 }
 }
