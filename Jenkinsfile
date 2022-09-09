@@ -15,8 +15,10 @@ pipeline {
      stage('Ansible Deploy') {
              
             steps {
-                 
-         sh  ansiblePlaybook(
+                script {
+                    ansiColor("xterm") {
+                        ansible.galaxy()
+                        ansiblePlaybook(
              credentialsId: 'Ansible2', 
              disableHostKeyChecking: true, 
              installation: 'ansible2', 
