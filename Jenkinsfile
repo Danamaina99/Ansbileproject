@@ -16,8 +16,7 @@ pipeline {
              
             steps {
                 script {
-                  
-                         ansible.galaxy()
+               
                         ansiblePlaybook(
              credentialsId: 'Ansible2', 
              disableHostKeyChecking: true, 
