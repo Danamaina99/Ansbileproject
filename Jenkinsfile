@@ -20,7 +20,7 @@ pipeline {
                         ansiblePlaybook(
              credentialsId: 'Ansible2', 
              disableHostKeyChecking: true, 
-             installation: 'ansible2', 
+             installation: 'Ansible 2.9.23', 
              inventory: 'inventory.ini', 
              playbook: 'apache.yml'
          )
