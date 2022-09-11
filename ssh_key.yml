@@ -1,0 +1,12 @@
+- name: exchange ssh keys
+  hosts: all hosts
+  vars:
+    ansible_users: "{{ service_account }}"
+    ssh_public_key:  "{{ ansible_password }}"
+
+  tasks:
+    - name: "exhcnage keys"
+      authorized_key:
+        user: "{{ ansible_user }}"
+        state: present
+        key: "{{ ssh_public_key }}" 
