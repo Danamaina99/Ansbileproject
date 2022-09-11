@@ -16,12 +16,12 @@ pipeline {
              
             steps {
                 script {
+                    withCredentials([sshUserPrivatKey(credentialsId: 'Ansible2', KeyFileVariable: 'keyfile')]) {
+                        sh(script: "$(tool 'Ansible 2.9.23}/ansible all -i inventory -m ping --private-key=${keyfile} -u 'Ansible2')
+                           
+                           }
                
-                        ansiblePlaybook credentialsId: 'Ansible2', 
-                            disableHostKeyChecking: true, 
-                            installation: 'ansible 2.9.23', 
-                            inventory: 'inventory.ini', 
-                            playbook: 'ssh_key.yml'
+                    
        
 
 }
