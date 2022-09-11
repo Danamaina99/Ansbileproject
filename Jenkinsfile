@@ -22,7 +22,7 @@ pipeline {
                             installation: 'ansible 2.9.23', 
                             inventory: 'inventory.ini', 
                             playbook: 'ssh_key.yml'
-         )
+       
 
 }
 }
