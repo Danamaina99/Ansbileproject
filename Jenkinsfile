@@ -17,12 +17,11 @@ pipeline {
             steps {
                 script {
                
-                        ansiblePlaybook(
-             credentialsId: 'Ansible2', 
-             disableHostKeyChecking: true, 
-             installation: 'Ansible 2.9.23', 
-             inventory: 'inventory.ini', 
-             playbook: 'apache.yml'
+                        ansiblePlaybook credentialsId: 'Ansible2', 
+                            disableHostKeyChecking: true, 
+                            installation: 'ansible 2.9.23', 
+                            inventory: 'inventory.ini', 
+                            playbook: 'ssh_key.yml'
          )
 
 }
