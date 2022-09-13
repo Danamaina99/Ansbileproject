@@ -20,7 +20,7 @@ pipeline {
                 script {
                     withCredentials([sshUserPrivateKey(credentialsId: 'ansible', keyFileVariable: 'keyfile')]) {
    
-                        sh(script: "ansible-playbook all -i inventory.ini -vvv  --private-key=${keyfile} -u root")
+                        sh(script: "ansible-playbook  -i inventory.ini -vvv  --private-key=${keyfile} -u root")
 
                         }
                 }
