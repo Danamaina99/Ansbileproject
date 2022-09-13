@@ -1,0 +1,8 @@
+---
+name: ssh-keyexchange
+hosts: all
+gather_facts: False
+vars:
+  ansible_user: root
+  ansible_password: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDWzD4pcFBmfS1STGLw8xzLVLgWCWBGJ/PcAaJEf0LV488Ze340yWOIRkPLMBYJ7piVTUU4ttrSItpO+wHzWI74LpeQh8pPk6vNGh0EddMJ1jh43zPWw6VrUGmfLEVozu2Li6j0tWh9ThKWowChb9hUQWXpznfC5FFm0K2vB5nDhq0HiJjXrYt31rt6M62Q4L3r9TlCqKorqegqbL+HxRkLEsVBuxqGswEEe68/8u6J6ip6WeZgEuXwfNyTQb5EcCTYbYt0lcFIjnRfrMwU2vGY+LG5lt/TNKGyUkf2YJOV3JpHmaGwcGoR6jf3T5tJhKz1wXUtoH9RJeZRSYzh4zSF root@ip-172-31-6-168.us-west-2.compute.internal
+  
