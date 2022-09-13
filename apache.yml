@@ -3,15 +3,12 @@
 - hosts: webservers 
   become: True
   tasks:
-    - name: Install packages
-      apt:
-        name: "nginx"
-        state: "present"
-    - name: Start nginx server
-      service:
-        name: nginx
-        state: started
-        enabled: True
+    - name: SSH key Exchange
+      authorized_key:
+        user: root
+        state: present
+        key: "{{ lookup('file', '/home/root/.ssh/id_rsa.pub') }}"
+        
     #- name: Deploy static website
      # copy:
        # src: index.html # We have define a html page 
