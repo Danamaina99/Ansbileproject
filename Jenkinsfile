@@ -1,10 +1,8 @@
 
 pipeline {
     agent any
-    tools {
-      ansible 'Ansible 2.9.23'
-    } 
-     
+    
+    
     stages {
       stage('checkout') {
            steps {
