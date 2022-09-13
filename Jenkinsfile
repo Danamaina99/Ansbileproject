@@ -20,7 +20,7 @@ pipeline {
                 script {
                     withCredentials([sshUserPrivateKey(credentialsId: 'ansible', keyFileVariable: 'keyfile')]) {
    
-                        sh(script: "${tool 'Ansible 2.9'}/ansible-playbook all -i inventory.ini -m ping --private-key=${keyfile} -u root")
+                        sh(script: "ansible-playbook all -i inventory.ini -vvv ./apache.yml -m ping --private-key=${keyfile} -u root")
 
                         }
                 }
