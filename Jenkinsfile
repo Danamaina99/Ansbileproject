@@ -2,7 +2,13 @@
 pipeline {
     agent any
     
-    
+    parameters {
+        
+        string(defaultValue: 'V.13', description: 'Release version. eg 1.0.0, name: "RELEASE_VERSION. trim: true)
+        choice(name: 'ENVIRONMENT', choices: environments, description: 'Environment')
+        
+        
+   
     stages {
       stage('checkout') {
            steps {
@@ -11,20 +17,6 @@ pipeline {
              
           }
         }
-        
- 
-        
-     stage('Ansible Deploy') {
-             
-            steps {
-                script {
-                    withCredentials([sshUserPrivateKey(credentialsId: 'ansible', keyFileVariable: 'keyfile')]) {
-   
-                        sh(script: "ansible all -i inventory.ini  -m ping  --private-key=${keyfile} -u root")
-
-                        }
-                }
-      }
       }
       }
      }
