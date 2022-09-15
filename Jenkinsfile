@@ -1,3 +1,7 @@
+#!groovy
+
+def ENVIRONMENT
+def RELEASE_VERSION
 
 pipeline {
     agent any
