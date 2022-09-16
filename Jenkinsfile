@@ -6,6 +6,7 @@ pipeline {
     
     parameters {
         
+        string(name: 'build_branch', defaultValue: 'main',description: 'branches to be build', trim: true)
         choice(name: 'version', choices: 'v.13, v.14', description: 'versions needs to release')
     }
     
