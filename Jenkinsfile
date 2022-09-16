@@ -7,7 +7,7 @@ pipeline {
     
     parameters {
         
-        choice(Name: 'version', Choices: 'v.13, v.14', Description: 'versions needs to release')
+        choice(name: 'version', choices: 'v.13, v.14', description: 'versions needs to release')
     }
     
    
