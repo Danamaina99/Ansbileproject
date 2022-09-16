@@ -12,7 +12,7 @@ pipeline {
         password(name: "TEST_PASSWORD", defaultValue: "SECRET", description: "Sample password parameter")
         //choice(name: "TEST_CHOICE", choices: ["production", "staging", "development"], description: "Sample multi-choice parameter")
         //choice(name: 'build_branch', choices: 'main' 'feature-branch', description: 'branches to be build', trim: true)
-        choice(name: 'environments' choices: ["dev", "uat"], description: 'select environments to be build')
+        choice(name: "environments" choices: ["dev", "uat"], description: "select environments to be build")
         //choice(name: 'version', choices: 'v.13', 'v.14', description: 'versions needs to release') 
     }
     
