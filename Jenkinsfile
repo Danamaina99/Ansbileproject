@@ -1,6 +1,5 @@
 #!groovy
 
-def version = "v.13, v.14"
 
 pipeline {
     agent any
